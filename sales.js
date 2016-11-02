@@ -59,15 +59,13 @@ function getCookie(cname) {
 
 function calculateReceipt()
 {
-  var receiptSubtotal = setCookie("preTax",runningTotal,1);
-  
+  var receiptSubtotal = getCookie("preTax",runningTotal,1);
   receiptSubtotal = receiptSubtotal.toFixed(2);
   var receiptTax = receiptSubtotal * 0.075;
   receiptTax = receiptTax.toFixed(2);
-  var receiptTotal = subtotal + receiptTax;
+  var receiptTotal = receiptSubtotal + receiptTax;
   receiptTotal = receiptTotal.toFixed(2);
   document.getElementById("sub").innerHTML = "$" + receiptSubtotal;
   document.getElementById("tax").innerHTML = "$" + receiptTax;
   document.getElementById("tot").innerHTML = "$" + receiptTotal;
-  finish steps 6, 11, 12
 }
