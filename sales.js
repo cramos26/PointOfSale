@@ -61,11 +61,8 @@ function calculateReceipt()
 {
   var receiptSubtotal = getCookie("preTax");
   receiptSubtotal = Number(receiptSubtotal);
-  receiptSubtotal = receiptSubtotal.toFixed(2);
   var receiptTax = receiptSubtotal * 0.075;
-  receiptTax = receiptTax.toFixed(2);
   var receiptTotal = receiptSubtotal + receiptTax;
-  receiptTotal = receiptTotal.toFixed(2);
   document.getElementById("sub").innerHTML = "$" + receiptSubtotal;
   document.getElementById("tax").innerHTML = "$" + receiptTax;
   document.getElementById("tot").innerHTML = "$" + receiptTotal;
